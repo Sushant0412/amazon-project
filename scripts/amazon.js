@@ -1,7 +1,4 @@
-import { products } from "../data/products.js";
-
 const productContainer = document.querySelector(".products-grid");
-
 let productHTML = "";
 
 products.forEach((p, index) => {
