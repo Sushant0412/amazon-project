@@ -3,7 +3,7 @@ import { products } from "../data/products.js";
 import money from "./utils/money.js";
 const productContainer = document.querySelector(".products-grid");
 const items = document.querySelector(".cart-quantity");
-items.innerHTML = 0; // || JSON.parse(localStorage.getItem("items"));
+items.innerHTML = 0 || JSON.parse(localStorage.getItem("cart")).length;
 let productHTML = "";
 
 products.forEach((p, index) => {
