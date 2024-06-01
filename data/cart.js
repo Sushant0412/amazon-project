@@ -10,13 +10,10 @@ export let cart = [
 ];
 
 export function deleteItem(id) {
-  const newCart = [];
-  cart.forEach((item) => {
-    if (item.productId !== id) {
-      newCart.push(item);
-    }
-  });
-  cart = newCart;
+  const index = cart.findIndex((item) => item.productId === id);
+  if (index !== -1) {
+    cart.splice(index, 1);
+  }
 }
 
 export function addToCart(productId) {
