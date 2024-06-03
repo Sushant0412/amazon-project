@@ -2,10 +2,6 @@ import { cart, addToCart } from "../data/cart.js";
 import { products } from "../data/products.js";
 import { formatCurrency } from "./utils/money.js";
 
-const itemsCount = document.querySelector(".cart-quantity");
-let cartFromStorage = JSON.parse(localStorage.getItem("cart")) || [];
-itemsCount.innerHTML = cartFromStorage.length || 0;
-
 let productsHTML = "";
 
 products.forEach((product) => {
